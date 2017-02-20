@@ -12,13 +12,12 @@
     <string name="menu_button_notifications_settings">Notifications</string>
     <string name="notifications_settings_vibrate">Vibrations</string>
     <string name="menu_button_global_settings">Général</string>
-    <string name="yop_bitch">Yop bitch</string>
     <string name="menu_global_settings">Général</string>
     <string name="menu_notifications_settings">Notifications</string>
-    <string name="notifications_settings_display_name_hint">Votre nom affiché</string>
+    <string name="general_settings_display_name_hint">Votre nom affiché</string>
     <string name="save_button">Sauvegarder</string>
     <string name="cancel_button">Annuler</string>
-    <string name="notifications_settings_female">Une femme</string>
-    <string name="notifications_settings_male">Un homme</string>
-    <string name="notifications_settings_gender_hint">Vous êtes</string>
+    <string name="general_settings_female">Une femme</string>
+    <string name="general_settings_male">Un homme</string>
+    <string name="general_settings_gender_hint">Vous êtes</string>
 </resources>
