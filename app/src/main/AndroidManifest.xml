@@ -14,8 +14,15 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http"
+                    android:host="nicolas-gigou.fr"
+                    android:pathPrefix="/mypushmotivator" />
             </intent-filter>
         </activity>
 
@@ -28,6 +35,12 @@
             android:name=".NotificationsSettingsActivity"
             android:label="@string/menu_notifications_settings">
         </activity>
+
+        <activity
+            android:name=".ContactActivity"
+            android:label="@string/menu_button_contact">
+        </activity>
+
     </application>
 
 </manifest>

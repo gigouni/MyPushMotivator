@@ -20,4 +20,6 @@
     <string name="general_settings_female">Une femme</string>
     <string name="general_settings_male">Un homme</string>
     <string name="general_settings_gender_hint">Vous êtes</string>
+    <string name="menu_button_contact">Contact</string>
+    <string name="data_saved">Données sauvegardées avec succès</string>
 </resources>
