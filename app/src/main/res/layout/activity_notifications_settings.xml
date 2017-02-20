@@ -10,54 +10,67 @@
     android:id="@+id/notifications_settings_layout"
     tools:context="com.totomasterdevw.pushmotivator.mypushmotivator.NotificationsSettingsActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/notifications_settings_display_name_hint_tv"
-        android:text="@string/notifications_settings_display_name_hint" />
-
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_vertical_margin"
-        android:paddingBottom="100dp"
-        android:id="@+id/notifications_settings_display_name_hint_et"
-        android:layout_below="@+id/notifications_settings_display_name_hint_tv"
-        android:inputType="text" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/notifications_settings_gender_hint_tv"
-        android:layout_below="@+id/notifications_settings_display_name_hint_tv"
-        android:text="@string/notifications_settings_gender_hint" />
+        android:id="@+id/layout_relative_layout_display_name" >
 
-    <RadioGroup
-        android:id="@+id/radioGrp"
-        android:layout_width="fill_parent"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/notifications_settings_display_name_hint_tv"
+            android:text="@string/notifications_settings_display_name_hint" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/notifications_settings_display_name_hint_et"
+            android:layout_below="@+id/notifications_settings_display_name_hint_tv"
+            android:inputType="text"
+            android:layout_height="40dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_fields"
-        android:orientation="horizontal"
-        android:layout_below="@+id/notifications_settings_gender_hint_tv">
+        android:id="@+id/layout_relative_layout_gender"
+        android:layout_below="@id/layout_relative_layout_display_name">
 
-        <RadioButton
-            android:id="@+id/radioM"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:checked="true"
-            android:layout_weight="1"
-            android:text="@string/notifications_settings_male" />
+            android:id="@+id/notifications_settings_gender_hint_tv"
+            android:text="@string/notifications_settings_gender_hint" />
 
-        <RadioButton
-            android:id="@+id/radioF"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:checked="false"
-            android:layout_weight="1"
-            android:text="@string/notifications_settings_female"
-            />
-    </RadioGroup>
+        <RadioGroup
+            android:id="@+id/notifications_settings_gender_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_fields"
+            android:orientation="horizontal"
+            android:layout_below="@+id/notifications_settings_gender_hint_tv">
+
+            <RadioButton
+                android:id="@+id/notifications_settings_radio_button_male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:checked="true"
+                android:layout_weight="1"
+                android:text="@string/notifications_settings_male" />
+
+            <RadioButton
+                android:id="@+id/notifications_settings_radio_button_female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:checked="false"
+                android:layout_weight="1"
+                android:text="@string/notifications_settings_female" />
+            
+        </RadioGroup>
+
+    </RelativeLayout>
 
     <Button
         android:text="@string/save_button"
@@ -80,4 +93,5 @@
         android:background="@color/cancel_button"
         android:textColor="@color/white"
         android:id="@+id/notifications_settings_button_cancel" />
+
 </RelativeLayout>
