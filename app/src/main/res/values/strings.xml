@@ -20,4 +20,10 @@
     <string name="notifications_settings_vibrate">Vibrate</string>
     <string name="general_settings_display_name_default">Toto Master</string>
     <string name="yop_bitch">Yop bitch</string>
+    <string name="notifications_settings_display_name_hint">Your display name</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="notifications_settings_male">Male</string>
+    <string name="notifications_settings_female">Female</string>
+    <string name="notifications_settings_gender_hint">Your gender</string>
 </resources>
