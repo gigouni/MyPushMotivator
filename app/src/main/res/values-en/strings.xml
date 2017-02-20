@@ -1,23 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">My Push Motivator</string>
-
+    <string name="catchphrase">You\'re awesome!</string>
     <string name="navigation_drawer_open">Open the menu</string>
     <string name="navigation_drawer_close">Close the menu</string>
-
-    <string name="catchphrase">You\'re awesome!</string>
-    <string name="menu_title_global">Global</string>
+    <string name="menu_title_global">General</string>
     <string name="menu_button_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
-
-    <!-- Strings related to Settings -->
-
-    <!-- Example settings for Notifications -->
-    <string name="menu_global_settings">General</string>
-    <string name="menu_notifications_settings">Notifications</string>
+    <string name="general_settings_display_name">Display name</string>
+    <string name="general_settings_display_name_default">Toto Master</string>
     <string name="menu_button_global_settings">General</string>
     <string name="menu_button_notifications_settings">Notifications</string>
-    <string name="general_settings_display_name">Display name</string>
     <string name="notifications_settings_vibrate">Vibrate</string>
-    <string name="general_settings_display_name_default">Toto Master</string>
     <string name="yop_bitch">Yop bitch</string>
+    <string name="menu_global_settings">General</string>
+    <string name="menu_notifications_settings">Notifications</string>
 </resources>

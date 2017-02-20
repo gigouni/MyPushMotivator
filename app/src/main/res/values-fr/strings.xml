@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mon Motivateur</string>
+    <string name="catchphrase">Tu es génial !</string>
+    <string name="navigation_drawer_close">Fermer le menu</string>
+    <string name="navigation_drawer_open">Ouvrir le menu</string>
+    <string name="menu_title_global">Général</string>
+    <string name="menu_button_settings">Paramètres</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="general_settings_display_name">Nom affiché</string>
+    <string name="general_settings_display_name_default">Toto Master</string>
+    <string name="menu_button_notifications_settings">Notifications</string>
+    <string name="notifications_settings_vibrate">Vibrations</string>
+    <string name="menu_button_global_settings">Général</string>
+    <string name="yop_bitch">Yop bitch</string>
+    <string name="menu_global_settings">Général</string>
+    <string name="menu_notifications_settings">Notifications</string>
+</resources>

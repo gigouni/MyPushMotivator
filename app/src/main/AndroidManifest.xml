@@ -18,6 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".GeneralSettingsActivity"
+            android:label="@string/menu_global_settings">
+        </activity>
+
+        <activity
+            android:name=".NotificationsSettingsActivity"
+            android:label="@string/menu_notifications_settings">
+        </activity>
     </application>
 
 </manifest>
