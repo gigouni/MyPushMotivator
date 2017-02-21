@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.menu_button_notifications_settings) {
             // Handle the notifications settings button
             startActivity(new Intent(MainActivity.this, NotificationsSettingsActivity.class));
+        } else if (id == R.id.menu_button_contact) {
+            // Handle the contact button
+            startActivity(new Intent(MainActivity.this, ContactActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
