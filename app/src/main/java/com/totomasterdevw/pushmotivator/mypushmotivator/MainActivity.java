@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         // Change the opacity of the background
-        this.findViewById(R.id.content_main).getBackground().setAlpha(80);
+        // this.findViewById(R.id.content_main).getBackground().setAlpha(80);
     }
 
     @Override

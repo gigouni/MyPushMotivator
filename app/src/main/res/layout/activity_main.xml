@@ -41,8 +41,7 @@
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:context="com.totomasterdevw.pushmotivator.mypushmotivator.MainActivity"
-            android:background="@drawable/mountains">
+            tools:context="com.totomasterdevw.pushmotivator.mypushmotivator.MainActivity">
 
             <TextView
                 android:text="@string/catchphrase"
@@ -53,6 +52,7 @@
                 android:textSize="32sp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView" />
+
         </RelativeLayout>
 
         <android.support.design.widget.FloatingActionButton

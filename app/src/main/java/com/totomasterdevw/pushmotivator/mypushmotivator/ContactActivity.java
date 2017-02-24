@@ -10,7 +10,6 @@ import android.widget.Button;
 public class ContactActivity extends AppCompatActivity {
 
     public static final String WEBSITE_URL = "http://nicolas-gigou.fr";
-    public static final String EMAIL_ADDRESS = "totomaster.dev@gmail.com";
     public static final String SUBJECT = "[My Push Motivator] Prise de contact";
     public static final String MESSAGE = "Bonjour, je voudrais prendre contact avec toi concernant l'application 'My Push Motivator'. A très vite !";
 
