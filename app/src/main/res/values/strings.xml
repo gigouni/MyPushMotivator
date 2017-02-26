@@ -35,4 +35,5 @@
     <string name="coming_soon">Content coming soon, stay awake!</string>
     <string name="contact_presenting">Hello and welcome! I’m Nicolas GIGOU, student in Master 2 MIAGE at the University of Rennes 1, France. I am a computer enthusiast and I always love to learn more. If I can relate these two things while helping people, it\'s perfect. I had the idea of this application, a motivator for every day to make you smile when you do not have it or just to make you spend a better day. I hope you enjoy it and if you want to consult my personal site and/or send me an email, do not hesitate. See you soon!</string>
     <string name="contact_internet_is_disabled">Internet is disabled. Switch it on before restarting your operation</string>
+    <string name="contact_profile_image">Profile image</string>
 </resources>
