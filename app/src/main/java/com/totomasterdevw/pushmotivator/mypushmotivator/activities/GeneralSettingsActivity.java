@@ -1,4 +1,4 @@
-package com.totomasterdevw.pushmotivator.mypushmotivator;
+package com.totomasterdevw.pushmotivator.mypushmotivator.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,8 +16,8 @@ import java.util.logging.Logger;
 public class GeneralSettingsActivity extends AppCompatActivity {
 
     public static final String MY_PREFS_NAME = "MyPrefsFile";
-    public static final int RADIO_BUTTON_MALE = 2131558523;
-    public static final int RADIO_BUTTON_FEMALE = 2131558524;
+    public static final int RADIO_BUTTON_MALE = 2131558528;
+    public static final int RADIO_BUTTON_FEMALE = 2131558529;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.totomasterdevw.pushmotivator.mypushmotivator;
+package com.totomasterdevw.pushmotivator.mypushmotivator.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
