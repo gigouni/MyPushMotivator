@@ -25,4 +25,7 @@
     <string name="contact_welcome">Bienvenue !</string>
     <string name="contact_link_to_website">Mon site perso</string>
     <string name="contact_send_email">Envoyer un mail</string>
+    <string name="coming_soon">Ce contenu sera bientôt mis à jour, restez à l\'affût !</string>
+    <string name="contact_presenting">Bonjour et bienvenu à toi ! Je me présente, Nicolas GIGOU, étudiant en Master 2 MIAGE à l’Université de Rennes 1, France. Je suis un passionné d’informatique et j’aime toujours en apprendre plus. Si je peux lié ces deux choses tout en aidant les gens, c’est parfait. J’ai eu l’idée de cette application, un motivateur de tous les jours afin de vous rendre le sourire quand vous ne l’avez pas ou simplement pour vous faire passer une meilleure journée. J’espère que vous apprécierez et si vous voulez consulter mon site perso et/ou m’envoyer un mail, n’hésitez surtout pas. A très vite !</string>
+    <string name="contact_internet_is_disabled">Votre connexion internet est coupée. Veuillez démarrer votre Wifi/vos données mobiles pour continuer</string>
 </resources>

@@ -19,6 +19,8 @@ public class GeneralSettingsActivity extends AppCompatActivity {
     public static final int RADIO_BUTTON_MALE = 2131558528;
     public static final int RADIO_BUTTON_FEMALE = 2131558529;
 
+    private final Logger logger = Logger.getLogger("GeneralSettingsActivity");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -30,8 +32,6 @@ public class GeneralSettingsActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         String stored_gender = preferences.getString("gender", null);
         String stored_display_name = preferences.getString("display_name", null);
-
-        final Logger logger = Logger.getAnonymousLogger();
 
         // If existing display name, fetch it in the Activity
         if (stored_display_name != null) {
@@ -86,10 +86,8 @@ public class GeneralSettingsActivity extends AppCompatActivity {
                 }
                 editor.apply();
 
-                // Notify and redirect
-                Snackbar.make(findViewById(android.R.id.content), R.string.data_saved, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null)
-                        .show();
+                // Notify
+                Snackbar.make(findViewById(android.R.id.content), R.string.data_saved, Snackbar.LENGTH_LONG).show();
             }
         });
     }
