@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +11,7 @@
     tools:context="com.totomasterdevw.pushmotivator.mypushmotivator.ContactActivity">
 
     <TextView
-        android:text="Welcome"
+        android:text="@string/contact_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +21,7 @@
         android:textSize="24sp" />
 
     <TextView
-        android:text='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co'
+        android:text="@string/lorem_ipsum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
@@ -32,7 +31,7 @@
         android:layout_marginTop="35dp" />
 
     <TextView
-        android:text="totomaster.devw@gmail.com"
+        android:text="@string/contact_email_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
@@ -42,7 +41,7 @@
         android:layout_marginTop="128dp" />
 
     <Button
-        android:text="Check my website"
+        android:text="@string/contact_link_to_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/contact_button_website"
@@ -51,7 +50,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="Send an email"
+        android:text="@string/contact_send_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/contact_button_email"

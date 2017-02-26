@@ -11,7 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.drawer_layout) DrawerLayout drawer_layout;
-    @BindView(R.id.frame_layout_main) FrameLayout frame_layout_main;
+    @BindView(R.id.content_main) RelativeLayout content_main;
     @BindView(R.id.nav_view) NavigationView navigation_view;
     @BindView(R.id.fab) FloatingActionButton fab;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
 
         navigation_view.setNavigationItemSelectedListener(this);
 
-        findViewById(R.id.content_main).getBackground().setAlpha(80);
+        content_main.getBackground().setAlpha(80);
     }
 
     @Override
