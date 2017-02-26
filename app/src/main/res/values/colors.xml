@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#333333</color>
     <color name="colorAccent">#008DC5</color>
     <color name="save_button">#15CC3D</color>
+    <color name="colorSave">#3A9D23</color>
+    <color name="colorCancel">#9E9E9E</color>
+    <color name="colorSaveDark">#00561B</color>
+    <color name="colorCancelDark">#696969</color>
     <color name="cancel_button">#738777</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>

@@ -72,9 +72,7 @@ public class MainActivity extends AppCompatActivity
             // Handle the contact button
             startActivity(new Intent(MainActivity.this, ContactActivity.class));
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        drawer_layout.closeDrawer(GravityCompat.START);
         return true;
     }
 }

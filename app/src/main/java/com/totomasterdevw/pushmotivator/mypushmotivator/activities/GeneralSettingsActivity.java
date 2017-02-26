@@ -19,7 +19,7 @@ public class GeneralSettingsActivity extends AppCompatActivity {
     public static final int RADIO_BUTTON_MALE = 2131558528;
     public static final int RADIO_BUTTON_FEMALE = 2131558529;
 
-    private final Logger logger = Logger.getLogger("GeneralSettingsActivity");
+    private final Logger logger = Logger.getLogger("GeneralSettings");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
