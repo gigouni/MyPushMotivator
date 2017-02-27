@@ -32,15 +32,23 @@
             tools:context="com.totomasterdevw.pushmotivator.mypushmotivator.MainActivity"
             android:background="@drawable/desert">
 
+            <android.support.design.widget.FloatingActionButton
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
             <TextView
-                android:text="@string/catchphrase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:textColor="#000"
+                android:layout_gravity="center"
+                android:text="@string/catchphrase"
+                android:elevation="16dp"
                 android:textSize="32sp"
+                android:textColor="@color/white"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView" />
+                android:layout_centerVertical="true" />
 
         </RelativeLayout>
 
