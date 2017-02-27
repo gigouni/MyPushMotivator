@@ -11,13 +11,13 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.totomasterdevw.pushmotivator.mypushmotivator.utils.EscapeChars;
+
 import java.util.logging.Logger;
 
 public class GeneralSettingsActivity extends AppCompatActivity {
 
     public static final String MY_PREFS_NAME = "MyPrefsFile";
-    public static final int RADIO_BUTTON_MALE = 2131558528;
-    public static final int RADIO_BUTTON_FEMALE = 2131558529;
 
     private final Logger logger = Logger.getLogger("GeneralSettings");
 
@@ -67,23 +67,22 @@ public class GeneralSettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                // Get display name value
                 EditText display_name = (EditText) findViewById(R.id.general_settings_display_name_hint_et);
-                String display_name_value = display_name.getText().toString();
+                String display_name_value = EscapeChars.forHTML(display_name.getText().toString());
+                logger.info("New display name (" + display_name_value + ") saved");
 
+                // Get the gender value within the RadioGroup
                 RadioGroup genderRadioGroup = (RadioGroup) findViewById(R.id.general_settings_gender_group);
                 int selectedRadioButton = genderRadioGroup.getCheckedRadioButtonId();
+                RadioButton selected_radio_button = (RadioButton) findViewById(selectedRadioButton);
+                Object radio_button_tag = selected_radio_button.getTag();
+                logger.info("New gender (" + radio_button_tag + ") saved");
 
+                // Put it it the SharedPreferences
                 SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
                 editor.putString("display_name", display_name_value);
-                if(selectedRadioButton == RADIO_BUTTON_MALE){
-                    editor.putString("gender", "male");
-                    logger.info("New gender (male) saved");
-                } else if(selectedRadioButton == RADIO_BUTTON_FEMALE){
-                    editor.putString("gender", "female");
-                    logger.info("New gender (female) saved");
-                } else {
-                    logger.info("Button radio selected: " + selectedRadioButton);
-                }
+                editor.putString("gender", "" + radio_button_tag);
                 editor.apply();
 
                 // Notify

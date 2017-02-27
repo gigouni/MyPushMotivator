@@ -45,7 +45,7 @@ public class NotificationsSettingsActivity extends AppCompatActivity {
                     logger.info("We show the content of the ScrollView");
                     scroll_view.setVisibility(View.VISIBLE);
                 } else {
-                    logger.info("We hide the ScrollView to avoid useless displayed views");
+                    logger.info("We hide the ScrollView content to avoid useless displayed views");
                     scroll_view.setVisibility(View.INVISIBLE);
                 }
                 SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();

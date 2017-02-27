@@ -57,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:checked="true"
+                android:tag="male"
                 android:layout_weight="1"
                 android:text="@string/general_settings_male" />
 
@@ -65,6 +66,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:tag="female"
                 android:checked="false"
                 android:layout_weight="1"
                 android:text="@string/general_settings_female" />
