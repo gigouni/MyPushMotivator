@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.drawer_layout) DrawerLayout drawer_layout;
     @BindView(R.id.content_main) RelativeLayout content_main;
     @BindView(R.id.nav_view) NavigationView navigation_view;
-    @BindView(R.id.fab) FloatingActionButton fab;
+    @BindView(R.id.main_fab_contact) FloatingActionButton main_fab_contact;
+    @BindView(R.id.main_fab_catch_phrase) FloatingActionButton main_fab_catch_phrase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        main_fab_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ContactActivity.class));
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         navigation_view.setNavigationItemSelectedListener(this);
 
         content_main.getBackground().setAlpha(80);
+        main_fab_catch_phrase.getBackground().setAlpha(100);
     }
 
     @Override
