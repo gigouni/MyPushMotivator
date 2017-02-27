@@ -10,7 +10,13 @@ import android.widget.Switch;
 
 import java.util.logging.Logger;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class NotificationsSettingsActivity extends AppCompatActivity {
+
+    @BindView(R.id.notifications_scroll_view) ScrollView scroll_view;
+    @BindView(R.id.notifications_switch_enable) Switch switch_enabler;
 
     public static final String MY_PREFS_NAME = "MyPrefsFile";
     private final static Logger logger = Logger.getLogger("NotificationsSettings");
@@ -21,14 +27,11 @@ public class NotificationsSettingsActivity extends AppCompatActivity {
         // Basic content
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications_settings);
+        ButterKnife.bind(this);
 
         // Values in the Shared Preferences
         SharedPreferences preferences = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         Boolean stored_allows_notifications = preferences.getBoolean("allows_notifications", false);
-
-        // Access to the views
-        final ScrollView scroll_view = (ScrollView) findViewById(R.id.notifications_scroll_view);
-        final Switch switch_enabler = (Switch) findViewById(R.id.notifications_switch_enable);
 
         // Auto setting of the switch checked value depending on the stored one
         switch_enabler.setChecked(stored_allows_notifications);

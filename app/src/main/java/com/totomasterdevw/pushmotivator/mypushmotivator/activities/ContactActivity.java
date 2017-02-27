@@ -13,13 +13,19 @@ import android.widget.Button;
 
 import java.util.logging.Logger;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ContactActivity extends AppCompatActivity {
+
+    @BindView(R.id.contact_button_website) Button website_button;
+    @BindView(R.id.contact_button_email) Button email_button;
 
     public static final String WEBSITE_URL = "http://nicolas-gigou.fr";
     public static final String SUBJECT = "[My Push Motivator] Prise de contact";
     public static final String MESSAGE = "Bonjour, je voudrais prendre contact avec toi concernant l'application 'My Push Motivator'. A très vite !";
 
-    private final Logger logger = Logger.getLogger("ContactActivity");
+    private static final Logger logger = Logger.getLogger("ContactActivity");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +33,9 @@ public class ContactActivity extends AppCompatActivity {
         // Basic content
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        ButterKnife.bind(this);
 
         // Click listener event
-        Button website_button = (Button) findViewById(R.id.contact_button_website);
         website_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +52,6 @@ public class ContactActivity extends AppCompatActivity {
         });
 
         // Click listener event
-        Button email_button = (Button) findViewById(R.id.contact_button_email);
         email_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

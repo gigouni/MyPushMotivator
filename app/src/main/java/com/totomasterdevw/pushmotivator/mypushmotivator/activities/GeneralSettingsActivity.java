@@ -15,11 +15,20 @@ import com.totomasterdevw.pushmotivator.mypushmotivator.utils.EscapeChars;
 
 import java.util.logging.Logger;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class GeneralSettingsActivity extends AppCompatActivity {
 
-    public static final String MY_PREFS_NAME = "MyPrefsFile";
+    @BindView(R.id.general_settings_display_name_hint_et) EditText display_name;
+    @BindView(R.id.general_settings_gender_group) RadioGroup genderRadioGroup;
+    @BindView(R.id.general_settings_radio_button_male) RadioButton radio_button_male;
+    @BindView(R.id.general_settings_radio_button_female) RadioButton radio_button_female;
+    @BindView(R.id.general_settings_button_save) Button save_button;
+    @BindView(R.id.general_settings_button_cancel) Button cancel_button;
 
-    private final Logger logger = Logger.getLogger("GeneralSettings");
+    public static final String MY_PREFS_NAME = "MyPrefsFile";
+    private static final Logger logger = Logger.getLogger("GeneralSettings");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +36,7 @@ public class GeneralSettingsActivity extends AppCompatActivity {
         // Basic content
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general_settings);
+        ButterKnife.bind(this);
 
         // Values in the Shared Preferences
         SharedPreferences preferences = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -36,7 +46,6 @@ public class GeneralSettingsActivity extends AppCompatActivity {
         // If existing display name, fetch it in the Activity
         if (stored_display_name != null) {
             logger.info("Display name isn't empty in the SharedPreferences: " + stored_display_name);
-            EditText display_name = (EditText) findViewById(R.id.general_settings_display_name_hint_et);
             display_name.setText(stored_display_name);
         }
 
@@ -44,16 +53,13 @@ public class GeneralSettingsActivity extends AppCompatActivity {
         if (stored_gender != null) {
             logger.info("Gender isn't empty in the SharedPreferences: " + stored_gender);
             if( stored_gender.equals("female") ) {
-                RadioButton btn = (RadioButton) findViewById(R.id.general_settings_radio_button_female);
-                btn.setChecked(true);
+                radio_button_female.setChecked(true);
             } else {
-                RadioButton btn = (RadioButton) findViewById(R.id.general_settings_radio_button_male);
-                btn.setChecked(true);
+                radio_button_male.setChecked(true);
             }
         }
 
         // Click listener event on CANCEL button
-        Button cancel_button = (Button) findViewById(R.id.general_settings_button_cancel);
         cancel_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,18 +68,15 @@ public class GeneralSettingsActivity extends AppCompatActivity {
         });
 
         // Click listener event on SAVE button
-        Button save_button = (Button) findViewById(R.id.general_settings_button_save);
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 // Get display name value
-                EditText display_name = (EditText) findViewById(R.id.general_settings_display_name_hint_et);
                 String display_name_value = EscapeChars.forHTML(display_name.getText().toString());
                 logger.info("New display name (" + display_name_value + ") saved");
 
                 // Get the gender value within the RadioGroup
-                RadioGroup genderRadioGroup = (RadioGroup) findViewById(R.id.general_settings_gender_group);
                 int selectedRadioButton = genderRadioGroup.getCheckedRadioButtonId();
                 RadioButton selected_radio_button = (RadioButton) findViewById(selectedRadioButton);
                 Object radio_button_tag = selected_radio_button.getTag();
