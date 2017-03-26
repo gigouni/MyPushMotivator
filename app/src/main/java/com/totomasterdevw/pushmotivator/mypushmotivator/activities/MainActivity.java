@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.totomasterdevw.pushmotivator.mypushmotivator.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

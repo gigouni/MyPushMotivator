@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.totomasterdevw.pushmotivator.mypushmotivator.R;
 import com.totomasterdevw.pushmotivator.mypushmotivator.utils.EscapeChars;
 
 import java.util.logging.Logger;
